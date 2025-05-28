@@ -39,14 +39,14 @@ const actualizarUsuario = async (req, res) => {
       datos: usuarioActualizado,
     });
   } catch (error) {
-    res.status(404).json({
+    res.status(500).json({
       exito: false,
-      mensaje: error,
+      mensaje: error.message || "Error al actualizar usuario",
     });
   }
 };
 
-//obtener todos los isiarios
+//obtener todos los usuarios
 
 const obtenerUsuarios = async (req, res) => {
   try {

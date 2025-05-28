@@ -1,5 +1,5 @@
 const express = require("express");
-const { crearUsuario } = require("../controllers/user.controller");
+const { crearUsuario, eliminarUsuario } = require("../controllers/user.controller");
 const {
   obtenerUsuarioPorId,
   obtenerUsuarios,
@@ -25,6 +25,6 @@ router.put("/:id", actualizarUsuario)
 
 // Ruta para eliminar un usuario 
 
-router.put("/:id", actualizarUsuario)
+router.put("/:id", eliminarUsuario)
 
 module.exports = router;

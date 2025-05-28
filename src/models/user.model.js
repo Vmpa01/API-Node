@@ -9,11 +9,12 @@ const usuarioSchema = new mongoose.Schema({
     required: [true, "El email es obligatorio"],
     unique: true,
   },
-  constraseña: {
+  contraseña: {
     type: String,
     required: [true, "La contraseña es obligatoria"],
     select: false,
   },
+
   edad: {
     type: Number,
     min: 0,
